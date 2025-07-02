@@ -1,0 +1,17 @@
+{
+  "id": "the-great-gatsby",
+  "title": "The Great Gatsby",
+  "author": "F. Scott Fitzgerald",
+  "chapters": [
+    {
+      "id": 1,
+      "title": "Chapter 1",
+      "content": "In my younger and more vulnerable years..."
+    },
+    {
+      "id": 2,
+      "title": "Chapter 2",
+      "content": "About half way between West Egg and New York..."
+    }
+  ]
+}

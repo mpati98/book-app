@@ -1,13 +1,152 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import "tailwindcss";
+
+.scrollbar-hide::-webkit-scrollbar{
+    display: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.scrollbar-hide{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* src/App.css */
+
+/* Main container for the book view */
+.book-container {
+  display: flex;
+}
+
+/* Chapter Navigation Sidebar */
+.chapter-nav {
+  width: 280px;
+  min-width: 240px;
+  height: 100vh;
+  overflow-y: auto; /* Allow scrolling if chapters list is long */
+  background-color: var(--nav-background-color);
+  border-right: 1px solid var(--border-color);
+  padding: 120px 0;
+  transition: background-color 0.3s, border-right 0.3s;
+}
+
+.chapter-nav h2 {
+  font-size: 1.5rem;
+  padding: 0 20px;
+  margin: 0 0 20px 0;
+}
+
+.chapter-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.chapter-nav li a {
+  display: block;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-color); /* Use the main text color for links */
+}
+
+.chapter-nav li:first-child a {
+  border-top: 1px solid var(--border-color);
+}
+
+.chapter-nav li a:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  text-decoration: none;
+}
+
+/* Style for the currently active chapter link */
+.chapter-nav li a.active {
+  background-color: var(--primary-color);
+  color: var(--nav-active-link-color);
+  font-weight: bold;
+}
+
+
+/* Chapter Content Area */
+.chapter-content-wrapper {
+  flex-grow: 1; /* Takes up the remaining space */
+  overflow-y: auto; /* Allows content to scroll */
+  padding: 140px 60px;
+}
+
+.chapter-content {
+  max-width: 800px; /* Optimal reading line width */
+  margin: 0 auto;
+}
+
+.chapter-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+}
+
+/* Style for the chapter text itself for readability */
+.chapter-content p {
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.7;   /* Generous line spacing */
+  margin-bottom: 1.5rem;
+}
+
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  .book-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .chapter-nav {
+    width: 100%;
+    height: auto;
+    max-height: 40vh; /* Don't let nav take too much vertical space */
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .chapter-content-wrapper {
+    padding: 20px;
+  }
+
+  .chapter-content h2 {
+    font-size: 2rem;
+  }
+
+  .chapter-content p {
+    font-size: 1rem;
+  }
+}
+
+/* Example CSS for the select dropdown */
+.chapter-select-container {
+  margin-bottom: 15px; /* Spacing below the dropdown */
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between label and select */
+}
+
+.chapter-select-container label {
+  font-weight: bold;
+  color: #555;
+}
+
+.chapter-select-container select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  flex-grow: 1; /* Allows the select to take available space */
+  max-width: 250px; /* Optional: Limit width */
+}
+
+/* Add some focus style for accessibility */
+.chapter-select-container select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
 }
