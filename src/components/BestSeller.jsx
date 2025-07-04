@@ -17,10 +17,10 @@ const BestSeller = () => {
                   <div className={styles.headerText}>
                       <h1 className={styles.title}>
                           <span className={styles.gradientText}>
-                              Curated Excellence
+                              Top truyện phổ biến
                           </span>
                       </h1>
-                      <p className={styles.subtitle}>Top rate by our reader</p>
+                      <p className={styles.subtitle}>Top đánh giá từ đọc giả</p>
                   </div>
                   {/* {RIGHT BTNS FOR MOVING LEFT AND RIGHT} */}
                   <div className={styles.navWrapper}>

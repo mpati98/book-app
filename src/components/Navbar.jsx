@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { navbarStyles } from "../assets/dummystyles";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../assets/logoicon.png";
+import logo from "../assets/yeutruyenlogo.jpg";
 import { navItems } from "../assets/dummydata";
 import { X, Menu } from "lucide-react";
 
@@ -20,7 +20,7 @@ const Navbar = () => {
               <div className="relative flex items-center">
                 <img src={logo} alt="logo" className={navbarStyles.logoImage} />
                 <div className="ml-2">
-                  <h1 className={navbarStyles.logoText}>LOVE NOVEL</h1>
+                  <h1 className={navbarStyles.logoText}>YÊU TRUYỆN</h1>
                   <div className={navbarStyles.logoUnderline}></div>
                 </div>
               </div>

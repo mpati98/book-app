@@ -2,16 +2,15 @@
 
 export const navbarStyles = {
   nav: (scrolled) =>
-    `fixed top-0 left-0 right-0 z-50 bg-white transition-all duration-500 ${
-      scrolled ? "shadow-md py-2" : "py-4"
+    `fixed top-0 left-0 right-0 z-50 bg-[#F0E8DE] transition-all duration-500 ${scrolled ? "shadow-md py-2" : "py-4"
     }`,
 
   container: "container mx-auto px-4 md:px-6",
   logoContainer: "flex items-center",
-  logoGradient: "absolute -inset-3 rounded-full opacity-0 blur-xl group-hover:opacity-30 transition-opacity bg-gradient-to-r from-[#43C6AC] to-[#F8FFAE]",
+  logoGradient: "absolute -inset-3 rounded-full opacity-0 blur-xl group-hover:opacity-30 transition-opacity bg-gradient-to-r from-[#D7A61E] to-[#7C8C03]",
   logoImage: "h-8 w-8 rounded-full z-10",
-  logoText: "text-xl font-bold bg-gradient-to-r from-[#43C6AC] to-[#2B5876] bg-clip-text text-transparent",
-  logoUnderline: "h-0.5 w-0 bg-gradient-to-r from-[#43C6AC] to-[#F8FFAE] group-hover:w-full transition-all duration-500",
+  logoText: "text-xl font-bold bg-gradient-to-r from-[#D7A61E] to-[#7C8C03] bg-clip-text text-transparent",
+  logoUnderline: "h-0.5 w-0 bg-gradient-to-r from-[#F2D6A0] to-[#D7A61E] group-hover:w-full transition-all duration-500",
 
   desktopNavWrapper: "hidden md:flex items-center space-x-1",
 
@@ -24,10 +23,9 @@ export const navbarStyles = {
     `relative h-5 w-5 ${isActive ? "text-white" : "text-gray-600 group-hover:text-white"} transition-colors duration-300 z-10`,
 
   navText: (isActive, color) =>
-    `ml-2 ${
-      isActive
-        ? `bg-gradient-to-r ${color} bg-clip-text text-transparent font-medium`
-        : "text-gray-600 group-hover:text-gray-900"
+    `ml-2 ${isActive
+      ? `bg-gradient-to-r ${color} bg-clip-text text-transparent font-medium`
+      : "text-gray-600 group-hover:text-gray-900"
     }`,
 
   navUnderline: (color) =>
@@ -52,8 +50,7 @@ export const navbarStyles = {
   mobileMenu: "md:hidden absolute top-full left-0 right-0 bg-white shadow-lg z-40",
   mobileContainer: "container mx-auto px-4 py-4",
   mobileNavItem: (isActive, color) =>
-    `flex items-center px-4 py-3 rounded-lg ${
-      isActive ? `bg-gradient-to-r ${color}/10` : "hover:bg-gray-100"
+    `flex items-center px-4 py-3 rounded-lg ${isActive ? `bg-gradient-to-r ${color}/10` : "hover:bg-gray-100"
     } transition-colors`,
 
   mobileNavIcon: (isActive, color) =>
@@ -128,17 +125,17 @@ export const scrollText =
 
 
 
-  // assets/dummy/dummystyles.js
+// assets/dummy/dummystyles.js
 
 export const ourBestSellersStyles = {
-  section: "py-12 md:py-16 bg-gray-50",
+  section: "py-12 md:py-16 bg-[#F0E8DE]",
   container: "container mx-auto px-4 md:px-6",
 
   // Header
   headerWrapper: "flex flex-col md:flex-row justify-between items-start md:items-center mb-8 md:mb-12 gap-4 md:gap-6",
   headerText: "space-y-1 md:space-y-2",
   title: "text-3xl md:text-4xl font-bold text-gray-900",
-  gradientText: "bg-gradient-to-r from-[#1A237E] to-[#43C6AC] bg-clip-text text-transparent",
+  gradientText: "bg-gradient-to-r from-[#D7A61E] to-[#7C8C03] bg-clip-text text-transparent",
   subtitle: "text-gray-600 text-base md:text-lg",
   navWrapper: "flex items-center gap-4 w-full md:w-auto",
   navLine: "hidden md:block flex-1 border-t border-gray-200",
@@ -287,8 +284,7 @@ export const footerStyles = {
 export const containerStyle = "min-h-screen pt-24 pb-16 bg-white"
 
 export const toastStyle = (type) =>
-  `fixed top-6 right-6 z-50 flex items-center p-4 rounded-lg shadow-md ${
-    type === "success" ? "bg-green-50 text-green-700" : "bg-red-50 text-red-700"
+  `fixed top-6 right-6 z-50 flex items-center p-4 rounded-lg shadow-md ${type === "success" ? "bg-green-50 text-green-700" : "bg-red-50 text-red-700"
   }`
 
 export const headerStyle = "text-center mb-12"
@@ -407,8 +403,7 @@ export const booksPageStyles = {
 export const contactPageStyles = {
   containerStyle: "py-16 pt-24 bg-gray-50 min-h-screen relative",
   toastStyle: (type) =>
-    `fixed top-6 left-1/2 transform -translate-x-1/2 z-50 px-4 py-3 rounded-md text-white flex items-center shadow-lg ${
-      type === "success" ? "bg-green-500" : "bg-red-500"
+    `fixed top-6 left-1/2 transform -translate-x-1/2 z-50 px-4 py-3 rounded-md text-white flex items-center shadow-lg ${type === "success" ? "bg-green-500" : "bg-red-500"
     }`,
   headerStyle: "text-center mb-12",
   contactInfoCardStyle: "bg-white p-6 rounded-lg shadow-lg",
@@ -504,8 +499,7 @@ export const Signup = {
 export const loginStyles = {
   container: "min-h-screen flex items-center justify-center bg-gray-50 p-4",
   toast: (type) =>
-    `fixed top-4 right-4 p-3 rounded-md ${
-      type === "success" ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"
+    `fixed top-4 right-4 p-3 rounded-md ${type === "success" ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"
     }`,
   card: "w-full max-w-md bg-white rounded-lg shadow-sm p-8",
   backLink: "flex items-center text-gray-600 mb-8",
