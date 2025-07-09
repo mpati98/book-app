@@ -1,13 +1,13 @@
 import React from 'react'
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import Books from '../components/Books';
+import LoadingBook from '../components/LoadingBook';
 
 const BookPage = () => {
   return (
       <>
           <Navbar />
-          <Books/>
+          <LoadingBook/>
           <Footer />
       </>
   )
