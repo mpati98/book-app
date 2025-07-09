@@ -15,6 +15,7 @@ const LoadingBook = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  const navigate = useNavigate()
   const scrollRef = useRef(null);
 
   const scrollLeft = () =>
@@ -22,9 +23,10 @@ const LoadingBook = () => {
   const scrollRight = () =>
     scrollRef.current.scrollBy({ left: 400, behavior: "smooth" });
 
-  const navigate = useNavigate()
+
   const toBook = (bookId) => {
     navigate(`/book/${bookId}`)
+    incrementView(records, bookId)
   }
 
   useEffect(() => {
@@ -54,7 +56,20 @@ const LoadingBook = () => {
 
   if (loading) return <p>Loading data...</p>;
   if (error) return <p>Error: {error.message}</p>;
-  console.log(records)
+  const incrementView = (records, bookID) => {
+    const currentBook = records.filter(book => book.fields.BookID === bookID)
+    const currentView = currentBook[0].fields.Views
+    const newView = currentView+1
+    base(AIRTABLE_TABLE_NAME).update([
+      {
+        id: currentBook[0].id,
+        fields: {
+          Views: newView
+        }
+      }
+    ])
+    console.log(currentView)
+  }
   return (
     <section className={styles.section}>
       <div className={styles.container}>
