@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
-import NavChapter from '../components/NavChapter';
-import ContetChapter from '../components/ContentChapter'
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import NavChapter from "../components/NavChapter";
+import ContetChapter from "../components/ContentChapter";
+import IntroductionBook from "../components/IntroductionBook";
 
 function BookDetail() {
   const { bookId, chapterId } = useParams();
@@ -10,17 +11,18 @@ function BookDetail() {
 
   useEffect(() => {
     fetch(`/data/${bookId}.json`)
-      .then(response => response.json())
-      .then(data => setBook(data));
+      .then((response) => response.json())
+      .then((data) => setBook(data));
   }, [bookId]);
 
   useEffect(() => {
-    if (book && chapterId) { // Also ensure chapterId exists
-      const chapter = book.chapters.find(c => c.id === parseInt(chapterId));
+    if (book && chapterId) {
+      // Also ensure chapterId exists
+      const chapter = book.chapters.find((c) => c.id === parseInt(chapterId));
       setCurrentChapter(chapter);
     } else if (book) {
-        // Optional: If no chapterId in URL, set currentChapter to null or a default
-        setCurrentChapter(null);
+      // Optional: If no chapterId in URL, set currentChapter to null or a default
+      setCurrentChapter(null);
     }
   }, [book, chapterId]);
 
@@ -29,7 +31,6 @@ function BookDetail() {
   }
 
   return (
-    
     <div className="book-container">
       <NavChapter chapters={book.chapters} bookId={bookId} />
       <main className="chapter-content-wrapper">
@@ -40,11 +41,18 @@ function BookDetail() {
         {currentChapter ? (
           <ContetChapter chapter={currentChapter} book={bookId} />
         ) : (
-          <div>Select a chapter to start reading.</div>
+          <IntroductionBook
+            coverImage={book.coverImage}
+            category={book.category}
+            title={book.title}
+            author={book.author}
+            description={book.description}
+          />
         )}
       </main>
+      )
     </div>
   );
 }
 
-export default BookDetail
+export default BookDetail;

@@ -68,7 +68,6 @@ const LoadingBook = () => {
         }
       }
     ])
-    console.log(currentView)
   }
   return (
     <section className={styles.section}>

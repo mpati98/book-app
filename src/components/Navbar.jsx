@@ -32,21 +32,22 @@ const Navbar = () => {
               const isActive = location.pathname === item.path;
               return (
                 <Link
-                  key={item.name}
-                  to={item.path}
-                  className={navbarStyles.navLink}
+                key={item.name}
+                to={item.path}
+                className={navbarStyles.navLink}
                 >
                   <div className="relative z-10 flex items-center">
                     <div className=" relative ">
                       <div
                         className={navbarStyles.navIconWrapper(item.color)}
-                      />
+                        />
                       <item.icon className={navbarStyles.navIcon(isActive)} />
                     </div>
                     <span
                       className={navbarStyles.navText(isActive, item.color)}
-                    >
+                      >
                       {item.name}
+                      {console.log(item.name)}
                     </span>
                     {isActive && (
                       <span

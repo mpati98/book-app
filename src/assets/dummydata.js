@@ -328,8 +328,7 @@ export const quickLinks = [
 // NAVBAR
 export const navItems = [
   { name: "Trang chủ", path: "/", icon: Home, color: "from-[#D7A61E] to-[#7C8C03]" },
-  { name: "Thư viện", path: "/books", icon: BookOpen, color: "from-[#D7A61E] to-[#7C8C03]" },
-  { name: "Liên hệ", path: "/contact", icon: Mail, color: "from-[#D7A61E] to-[#7C8C03]" },
+  { name: "Liên hệ", path: "/contact", icon: Mail, color: "from-[#D7A61E] to-[#7C8C03]" }
 ]
 
 // BANNER

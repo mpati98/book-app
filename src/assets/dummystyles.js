@@ -12,7 +12,7 @@ export const navbarStyles = {
   logoText: "text-xl font-bold bg-gradient-to-r from-[#D7A61E] to-[#7C8C03] bg-clip-text text-transparent",
   logoUnderline: "h-0.5 w-0 bg-gradient-to-r from-[#F2D6A0] to-[#D7A61E] group-hover:w-full transition-all duration-500",
 
-  desktopNavWrapper: "hidden md:flex items-center space-x-1",
+  desktopNavWrapper: "md:flex items-center space-x-1",
 
   navLink: "relative group px-5 py-3.5 rounded-lg transition-all duration-300 overflow-hidden",
 
