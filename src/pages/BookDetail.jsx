@@ -38,7 +38,7 @@ function BookDetail() {
           Only render ChapterContent if currentChapter is not null.
         */}
         {currentChapter ? (
-          <ContetChapter chapter={currentChapter} />
+          <ContetChapter chapter={currentChapter} book={bookId} />
         ) : (
           <div>Select a chapter to start reading.</div>
         )}
