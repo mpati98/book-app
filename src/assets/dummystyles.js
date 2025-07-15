@@ -8,7 +8,7 @@ export const navbarStyles = {
   container: "container mx-auto px-4 md:px-6",
   logoContainer: "flex items-center",
   logoGradient: "absolute -inset-3 rounded-full opacity-0 blur-xl group-hover:opacity-30 transition-opacity bg-gradient-to-r from-[#D7A61E] to-[#7C8C03]",
-  logoImage: "h-8 w-8 rounded-full z-10",
+  logoImage: "h-20 w-20 rounded-full z-10",
   logoText: "text-xl font-bold bg-gradient-to-r from-[#D7A61E] to-[#7C8C03] bg-clip-text text-transparent",
   logoUnderline: "h-0.5 w-0 bg-gradient-to-r from-[#F2D6A0] to-[#D7A61E] group-hover:w-full transition-all duration-500",
 

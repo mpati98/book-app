@@ -245,3 +245,53 @@
 .hidden {
   display: none;
 }
+
+
+/* Book Carousel */
+.book-carousel-container {
+  /* A narrower container works better for the card stack effect */
+  width: 100%;
+  max-width: 450px; 
+  margin: 150px auto;
+}
+
+/* Styles for the Swiper component itself */
+.swiper {
+  width: 320px; 
+  height: 480px;
+}
+
+.book-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 18px; /* Slightly more pronounced radius looks good on cards */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.book-slide img {
+  display: block;
+  width: 70%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.book-slide h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.book-slide p {
+  margin: 0;
+  font-size: 1rem;
+  color: #777;
+}
