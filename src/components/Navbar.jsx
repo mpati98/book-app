@@ -47,7 +47,6 @@ const Navbar = () => {
                       className={navbarStyles.navText(isActive, item.color)}
                       >
                       {item.name}
-                      {console.log(item.name)}
                     </span>
                     {isActive && (
                       <span

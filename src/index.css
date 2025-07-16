@@ -1,4 +1,7 @@
 @import "tailwindcss";
+*{
+  font-family: 'Times New Roman', Times, serif;
+}
 
 .scrollbar-hide::-webkit-scrollbar{
     display: none;
