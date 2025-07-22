@@ -298,3 +298,115 @@
   font-size: 1rem;
   color: #777;
 }
+
+.ad-section {
+  position: relative;
+  padding: 320px 60px;
+  border-radius: 16px;
+  overflow: hidden; /* Ensures overlay respects the border-radius */
+  text-align: center;
+  color: #ffffff;
+  
+  /* Background image properties */
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+}
+
+.ad-section:hover {
+    transform: scale(1.02);
+}
+
+/* Dark overlay for text readability */
+.ad-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.55); /* 55% black transparency */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ad-content {
+  position: absolute; /* Ensures content is on top of the overlay */
+  z-index: 1;
+  max-width: 700px;
+}
+
+.ad-content h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin: 0 0 16px 0;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.ad-content p {
+  font-size: 1.125rem;
+  margin: 0 0 32px 0;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #5e60ce;
+  color: #ffffff;
+  padding: 14px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.cta-button:hover {
+  background-color: #4648a8;
+  transform: translateY(-3px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .ad-section {
+        padding: 60px 20px;
+    }
+    .ad-content h2 {
+        font-size: 2.2rem;
+    }
+    .ad-content p {
+        font-size: 1rem;
+    }
+}
+
+.featured-container {
+  display: flex;
+  gap: 10px; /* Space between the two columns */
+  padding: 2em;
+  max-width: 1600px;
+  margin: 10rem 0 -5rem 0;
+}
+
+.featured-column {
+  /* Each column will take up equal space */
+  flex: 1; 
+  min-width: 0; /* Important for flex items to shrink properly */
+}
+
+.ad-column {
+  /* The ad section might look better if it doesn't grow too much */
+  flex-grow: 0.8;
+}
+
+
+/* --- Responsive Design --- */
+/* On screens smaller than 1024px, the columns will stack vertically */
+@media (max-width: 1024px) {
+  .featured-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+}

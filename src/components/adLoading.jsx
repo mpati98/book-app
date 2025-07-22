@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 function AdPlayer({ videoSrc, onSkip }) {
   const [isLoading, setIsLoading] = useState(true);
@@ -22,6 +23,12 @@ function AdPlayer({ videoSrc, onSkip }) {
       video.removeEventListener("timeupdate", handleTimeUpdate);
     };
   }, []);
+  const handleVideoClick = () => {
+        // Navigate to a specific URL
+        window.open('https://www.google.com');
+        // Or, if you want to open in a new tab:
+        // window.open('https://www.example.com/your-destination-page', '_blank');
+      };
 
   return (
     <div className="ad-player-container">
@@ -35,6 +42,7 @@ function AdPlayer({ videoSrc, onSkip }) {
         playsInline
         onCanPlay={() => setIsLoading(false)} // Hide loading when video is ready
         className={isLoading ? "hidden" : ""}
+        onClick={handleVideoClick}
       />
 
       {canSkip && (

@@ -9,8 +9,6 @@ import "swiper/css/effect-cards";
 
 // 1. Import Autoplay module in addition to EffectCards
 import { Autoplay, EffectCards } from "swiper/modules";
-import { homeBooksStyles as styles } from "../assets/dummystyles";
-import imageAd from '../assets/London.jpg'
 
 // Sample book data (same as before)
 const books = [
@@ -48,39 +46,28 @@ const books = [
 
 export default function BookCarousel() {
   return (
-    <div className={styles.section}>
-      <div className={styles.container}>
-            <div className="flex">
-              <div className="book-carousel-container ">
-                <img src={imageAd} alt="Ads" />
-              </div>
-        <div className={styles.card}>
-              <div className="book-carousel-container">
-                <Swiper
-                  effect={"cards"}
-                  grabCursor={true}
-                  modules={[Autoplay, EffectCards]} // 2. Add Autoplay to the modules array
-                  className="mySwiper"
-                  // 3. Add the autoplay configuration object
-                  autoplay={{
-                    delay: 2500,
-                    disableOnInteraction: false,
-                  }}
-                >
-                  {books.map((book) => (
-                    <SwiperSlide key={book.id}>
-                      <div className="book-slide">
-                        <img src={book.coverImage} alt={book.title} />
-                        <h3>{book.title}</h3>
-                        <p>{book.author}</p>
-                      </div>
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
-              </div>
+    <div className="book-carousel-container">
+      <Swiper
+        effect={"cards"}
+        grabCursor={true}
+        modules={[Autoplay, EffectCards]} // 2. Add Autoplay to the modules array
+        className="mySwiper"
+        // 3. Add the autoplay configuration object
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+      >
+        {books.map((book) => (
+          <SwiperSlide key={book.id}>
+            <div className="book-slide">
+              <img src={book.coverImage} alt={book.title} />
+              <h3>{book.title}</h3>
+              <p>{book.author}</p>
             </div>
-        </div>
-      </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 }
