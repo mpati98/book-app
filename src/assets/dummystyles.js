@@ -179,7 +179,7 @@ export const homeBooksStyles = {
   card: "bg-white rounded-2xl shadow-lg p-8 md:p-12",
   heading: "text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#43C6AC] to-[#2B5876] bg-clip-text text-transparent mb-4",
   headingLine: "h-1 w-20 bg-gradient-to-r from-[#43C6AC] to-[#F8FFAE] rounded-full mx-auto",
-  grid: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8",
+  grid: "grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8",
   bookCard: "group relative",
   imageWrapper: "relative h-72 overflow-hidden rounded-xl border-4 border-[#43C6AC]/20 mb-4",
   image: "w-full h-full object-cover transition-transform duration-500 group-hover:scale-105",

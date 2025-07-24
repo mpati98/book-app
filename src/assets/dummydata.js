@@ -312,10 +312,10 @@ export const featuredBooks = [
 
 // FOOTER
 export const socialLinks = [
-  { Icon: FaFacebook, url: "https://facebook.com/" },
-  { Icon: FaTwitter, url: "https://twitter.com/" },
-  { Icon: FaInstagram, url: "https://instagram.com/" },
-  { Icon: FaYoutube, url: "https://youtube.com/" },
+  { Icon: FaFacebook, url: "https://www.facebook.com/profile.php?id=100068254200967" },
+  { Icon: FaTwitter, url: "/" },
+  { Icon: FaInstagram, url: "/" },
+  { Icon: FaYoutube, url: "/" },
 ]
 
 export const quickLinks = [
