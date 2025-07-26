@@ -10,7 +10,7 @@ const Home = () => {
     const home = {
     title: "Yêu Truyện",
     description: "Website đọc truyện chuyển ngữ",
-    imageUrl: imgLogo,
+    imageUrl: {imgLogo},
     pageUrl: "https://www.yeutruyen.com.vn"
   };
   return (
