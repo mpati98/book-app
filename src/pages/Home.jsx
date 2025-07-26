@@ -3,15 +3,14 @@ import HomeBook from "../components/HomeBook";
 import Navbar from "../components/Navbar";
 import LoadingBook from "../components/LoadingBook";
 import FeaturedContent from "../components/featureContent";
-import { Helmet } from 'react-helmet-async';
-import imgLogo from "../assets/yeutruyenlogo.jpg"
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
-    const home = {
+  const home = {
     title: "Yêu Truyện",
     description: "Website đọc truyện chuyển ngữ",
-    imageUrl: {imgLogo},
-    pageUrl: "https://www.yeutruyen.com.vn"
+    imageUrl: 'https://oqsx2c43drknwdq2.public.blob.vercel-storage.com/yeutruyenlogo.jpg',
+    pageUrl: "https://www.yeutruyen.com.vn",
   };
   return (
     <>
@@ -26,12 +25,6 @@ const Home = () => {
         <meta property="og:image" content={home.imageUrl} />
         <meta property="og:url" content={home.pageUrl} />
         <meta property="og:type" content="article" />
-
-        {/* X (formerly Twitter) Card Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={home.title} />
-        <meta name="twitter:description" content={home.description} />
-        <meta name="twitter:image" content={home.imageUrl} />
       </Helmet>
       <Navbar />
       <FeaturedContent />
