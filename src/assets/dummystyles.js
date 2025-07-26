@@ -129,7 +129,7 @@ export const scrollText =
 
 export const ourBestSellersStyles = {
   section: "py-12 md:py-16 bg-[#F0E8DE]",
-  container: "container mx-auto px-4 md:px-6",
+  container: "container mx-auto px-4 md:px-4",
 
   // Header
   headerWrapper: "flex flex-col md:flex-row justify-between items-start md:items-center mb-8 md:mb-12 gap-4 md:gap-6",

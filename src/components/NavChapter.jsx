@@ -13,7 +13,6 @@ function NavChapter({ chapters, bookId, chaptersPerPage = 10 }) {
   // This function will be called when the skip button is clicked
   const handleSkipAd = () => {
     setShowAd(false);
-    setCount(0);
   };
 
   // Replace with the actual URL or path to your video file

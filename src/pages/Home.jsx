@@ -3,7 +3,7 @@ import HomeBook from "../components/HomeBook";
 import Navbar from "../components/Navbar";
 import LoadingBook from "../components/LoadingBook";
 import FeaturedContent from "../components/featureContent";
-import image from "../assets/logo4share.png"
+import image from "../assets/logo4share.png";
 
 const Home = () => {
   const home = {
@@ -13,15 +13,15 @@ const Home = () => {
   };
   return (
     <>
-        {/* Standard HTML Tags */}
-        <title>{home.title}</title>
-        <meta name="description" content={home.description} />
+      {/* Standard HTML Tags */}
+      <title>{home.title}</title>
+      <meta name="description" content={home.description} />
 
-        {/* Open Graph Tags (for Facebook, LinkedIn, etc.) */}
-        <meta property="og:title" content={home.title} />
-        <meta property="og:description" content={home.description} />
-        <meta property="og:image" content={image} />
-        <meta property="og:url" content={home.pageUrl} />
+      {/* Open Graph Tags (for Facebook, LinkedIn, etc.) */}
+      <meta property="og:title" content={home.title} />
+      <meta property="og:description" content={home.description} />
+      <meta property="og:image" content={image} />
+      <meta property="og:url" content={home.pageUrl} />
       <Navbar />
       <FeaturedContent />
       <LoadingBook />

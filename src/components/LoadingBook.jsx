@@ -79,7 +79,8 @@ const LoadingBook = () => {
       : records.filter(
           (record) =>
             // Check if the record's 'Tags' array exists and includes the active category
-            record.fields.Categories && record.fields.Categories.includes(activeCategory)
+            record.fields.Categories &&
+            record.fields.Categories.includes(activeCategory)
         );
   return (
     <section className={styles.section}>
@@ -90,71 +91,69 @@ const LoadingBook = () => {
             <h1 className={styles.title}>
               <span className={styles.gradientText}>Top truyện phổ biến</span>
             </h1>
-            <p className={styles.subtitle}>Top đánh giá từ đọc giả</p>
           </div>
-          {/* {RIGHT BTNS FOR MOVING LEFT AND RIGHT} */}
-          <div>
-            <h3>Filter by Tag (Client-Side)</h3>
-            <div style={{ marginBottom: "1rem" }}>
-              {filterCategories.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setActiveCategory(category)}
-                  style={{
-                    marginRight: "8px",
-                    padding: "8px 12px",
-                    fontWeight: activeCategory === category ? "bold" : "normal",
-                  }}
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
-            <div className={styles.navWrapper}>
-              <div className={styles.navLine} />
-              <div className={styles.navButtons}>
-                <button onClick={scrollLeft} className={styles.navBtn}>
-                  <ChevronLeft className={styles.navIcon} size={20} />
-                </button>
-                <button onClick={scrollRight} className={styles.navBtn}>
-                  <ChevronRight className={styles.navIcon} size={20} />
-                </button>
-              </div>
-            </div>
-          </div>
-          {/* {BOOKS SECTIONS} */}
-          {loading ? (
-            <p>Loading...</p>
-          ) : (
-            <div className={styles.scrollContainer} ref={scrollRef}>
-              {filteredRecords.map((book, index) => (
-                <div
-                  className={styles.card(bgColors[index % bgColors.length])}
-                  key={index}
-                  onClick={() => toBook(book.fields.BookID)}
-                >
-                  <div className={styles.cardInner}>
-                    <div className="space-y-3 md:space-y-4">
-                      <div className={styles.stars}>
-                        {[...Array(book.fields.Rating)].map((_, i) => (
-                          <Star
-                            className="h-4 w-4 md:h-5 md:w-5 text-amber-400 fill-amber-400"
-                            key={i}
-                          />
-                        ))}
-                      </div>
-                      <div className={styles.bookInfo}>
-                        <h2 className={styles.bookTitle}>{book.fields.Name}</h2>
-                        <p className={styles.bookAuthor}>
-                          {book.fields.Author}
-                        </p>
-                      </div>
+        </div>
+        {/* {RIGHT BTNS FOR MOVING LEFT AND RIGHT} */}
+        <div style={{ marginBottom: "1rem" }}>
+          {filterCategories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setActiveCategory(category)}
+              style={{
+                marginRight: "8px",
+                padding: "8px 12px",
+                fontWeight: activeCategory === category ? "bold" : "normal",
+              }}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+        {/* {BOOKS SECTIONS} */}
+        {loading ? (
+          <p>Loading...</p>
+        ) : (
+          <div className={styles.scrollContainer} ref={scrollRef}>
+            {filteredRecords.map((book, index) => (
+              <div
+                className={styles.card(bgColors[index % bgColors.length])}
+                key={index}
+                onClick={() => toBook(book.fields.BookID)}
+              >
+                <img src={book.fields.Cover[0].url} alt={book.fields.title} />
+                <div className={styles.cardInner}>
+                  <div className="space-y-3 md:space-y-4">
+                    <div className={styles.stars}>
+                      {[...Array(book.fields.Rating)].map((_, i) => (
+                        <Star
+                          className="h-4 w-4 md:h-5 md:w-5 text-amber-400 fill-amber-400"
+                          key={i}
+                        />
+                      ))}
+                    </div>
+                    <div className={styles.bookInfo}>
+                      {[...Array(book.fields.Categories)].map((i, _) => (
+                        <span className={styles.qtyBtn}>{i + " "}</span>
+                      ))}
                     </div>
                   </div>
                 </div>
-              ))}
+              </div>
+            ))}
+          </div>
+        )}
+        <div>
+          <div className={styles.navWrapper}>
+            <div className={styles.navLine} />
+            <div className={styles.navButtons}>
+              <button onClick={scrollLeft} className={styles.navBtn}>
+                <ChevronLeft className={styles.navIcon} size={20} />
+              </button>
+              <button onClick={scrollRight} className={styles.navBtn}>
+                <ChevronRight className={styles.navIcon} size={20} />
+              </button>
             </div>
-          )}
+          </div>
         </div>
       </div>
     </section>

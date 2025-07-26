@@ -1,0 +1,82 @@
+{
+  "id": "B202510",
+  "title": "CHÚNG TA CỦA NHỮNG NĂM VỀ SAU",
+  "coverImage": "/data/covers/B202510.jpg",
+  "author": "",
+  "description": "/data/B202510/description.txt",
+  "category": "Chữa lành, Học đường, Ngọt",
+  "chapters": [
+    {
+      "id": 1,
+      "title": "Chương 01"
+    },
+    {
+      "id": 2,
+      "title": "Chương 02"
+    },
+    {
+      "id": 3,
+      "title": "Chương 03"
+    },
+    {
+      "id": 4,
+      "title": "Chương 04"
+    },
+    {
+      "id": 5,
+      "title": "Chương 05"
+    },
+    {
+      "id": 6,
+      "title": "Chương 06"
+    },
+    {
+      "id": 7,
+      "title": "Chương 07"
+    },
+    {
+      "id": 8,
+      "title": "Chương 08"
+    },
+    {
+      "id": 9,
+      "title": "Chương 09"
+    },
+    {
+      "id": 10,
+      "title": "Chương 10"
+    },
+    {
+      "id": 11,
+      "title": "Chương 11"
+    },
+    {
+      "id": 12,
+      "title": "Chương 12"
+    },
+    {
+      "id": 13,
+      "title": "Chương 13"
+    },
+    {
+      "id": 14,
+      "title": "Chương 14"
+    },
+    {
+      "id": 15,
+      "title": "Chương 15"
+    },
+    {
+      "id": 16,
+      "title": "Chương 16"
+    },
+    {
+      "id": 17,
+      "title": "Chương 17"
+    },
+    {
+      "id": 18,
+      "title": "Chương 18"
+    }
+  ]
+}

@@ -20,7 +20,6 @@ const BestSeller = () => {
                               Top truyện phổ biến
                           </span>
                       </h1>
-                      <p className={styles.subtitle}>Top đánh giá từ đọc giả</p>
                   </div>
                   {/* {RIGHT BTNS FOR MOVING LEFT AND RIGHT} */}
                   <div className={styles.navWrapper}>
