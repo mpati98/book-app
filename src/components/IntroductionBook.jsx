@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 function IntroductionBook({
   coverImage,
@@ -7,23 +7,23 @@ function IntroductionBook({
   author,
   description,
 }) {
-    const categories = category.split(",");
-    
-  const [data, setData] = useState('');
+  const categories = category.split(",");
+
+  const [data, setData] = useState("");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-    useEffect(() => {
+  useEffect(() => {
     fetch(`${description}`)
-      .then(response => {
+      .then((response) => {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         return response.text();
       })
-      .then(text => {
+      .then((text) => {
         setData(text);
       })
-      .catch(err => {
+      .catch((err) => {
         setError(err);
       })
       .finally(() => {
@@ -36,7 +36,7 @@ function IntroductionBook({
   }
 
   if (error) {
-    return <div style={{ color: 'red' }}>Error: {error.message}</div>;
+    return <div style={{ color: "red" }}>Error: {error.message}</div>;
   }
 
   return (
@@ -47,7 +47,7 @@ function IntroductionBook({
       </div>
 
       {/* Introduction Content */}
-          <div className="intro-content">
+      <div className="intro-content">
         <h1>{title}</h1>
         {categories.map((item, index) => (
           <span key={index} className="category">
@@ -55,7 +55,9 @@ function IntroductionBook({
           </span>
         ))}
         <p className="author">Đăng bởi: {author}</p>
-        <p className="description">{data}</p>
+        <pre className="whitespace-pre-line">
+          <code>{data}</code>
+        </pre>
       </div>
     </section>
   );
