@@ -8,7 +8,7 @@ const Home = () => {
   const home = {
     title: "Yêu Truyện",
     description: "Website đọc truyện chuyển ngữ",
-    imageUrl: 'https://oqsx2c43drknwdq2.public.blob.vercel-storage.com/yeutruyenlogo.png',
+    imageUrl: 'https://oqsx2c43drknwdq2.public.blob.vercel-storage.com/yeutruyenlogo%20%281%29.png',
     pageUrl: "https://www.yeutruyen.com.vn",
   };
   return (
