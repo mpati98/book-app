@@ -3,6 +3,7 @@ import HomeBook from "../components/HomeBook";
 import Navbar from "../components/Navbar";
 import LoadingBook from "../components/LoadingBook";
 import FeaturedContent from "../components/featureContent";
+import image from "../assets/A1.png"
 
 const Home = () => {
   const home = {
