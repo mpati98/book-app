@@ -3,7 +3,6 @@ import HomeBook from "../components/HomeBook";
 import Navbar from "../components/Navbar";
 import LoadingBook from "../components/LoadingBook";
 import FeaturedContent from "../components/featureContent";
-import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const home = {
@@ -14,7 +13,6 @@ const Home = () => {
   };
   return (
     <>
-      <Helmet>
         {/* Standard HTML Tags */}
         <title>{home.title}</title>
         <meta name="description" content={home.description} />
@@ -24,8 +22,6 @@ const Home = () => {
         <meta property="og:description" content={home.description} />
         <meta property="og:image" content={home.imageUrl} />
         <meta property="og:url" content={home.pageUrl} />
-        <meta property="og:type" content="article" />
-      </Helmet>
       <Navbar />
       <FeaturedContent />
       <LoadingBook />
