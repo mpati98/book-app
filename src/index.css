@@ -21,6 +21,7 @@
 
 /* Chapter Navigation Sidebar */
 .chapter-nav {
+  margin-top: 2rem;
   width: 280px;
   min-width: 240px;
   height: 100vh;
@@ -72,10 +73,11 @@
 .chapter-content-wrapper {
   flex-grow: 1; /* Takes up the remaining space */
   overflow-y: auto; /* Allows content to scroll */
-  padding: 140px 60px;
+  padding: 80px 60px;
 }
 
 .chapter-content {
+  margin-top: 2rem;
   max-width: 800px; /* Optimal reading line width */
   margin: 0 auto;
 }
@@ -103,6 +105,7 @@
   }
 
   .chapter-nav {
+    display: none;
     width: 100%;
     height: auto;
     max-height: 40vh; /* Don't let nav take too much vertical space */
@@ -111,6 +114,7 @@
   }
   
   .chapter-content-wrapper {
+    margin-top: 2rem;
     padding: 20px;
   }
 
@@ -409,4 +413,37 @@
     flex-direction: column;
     padding: 20px;
   }
+}
+
+/* Example CSS for the new section */
+.content-end-section {
+  margin-top: 40px; /* Space between content and this section */
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.next-chapter-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+
+.next-chapter-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.next-chapter-btn:hover {
+  background-color: #0056b3;
 }

@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import NavChapter from "../components/NavChapter";
 import ContetChapter from "../components/ContentChapter";
 import IntroductionBook from "../components/IntroductionBook";
+import ControlChapter from "../components/chapterControl"
 
 function BookDetail() {
   const { bookId, chapterId } = useParams();
@@ -49,6 +50,7 @@ function BookDetail() {
             description={book.description}
           />
         )}
+        <ControlChapter chapters={book.chapters} bookId={bookId} />
       </main>
       )
     </div>

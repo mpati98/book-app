@@ -1,8 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom"; // Import useNavigate
 import AdPlayer from "../components/adLoading";
 
-function NavChapter({ chapters, bookId, chaptersPerPage = 10 }) {
+function NavChapter({
+  chapters,
+  bookId,
+  chaptersPerPage = 10,
+  onNavigateToChapter,
+}) {
   const { chapterId } = useParams();
   const navigate = useNavigate(); // Initialize useNavigate
   const currentChapterId = parseInt(chapterId);
@@ -21,6 +26,7 @@ function NavChapter({ chapters, bookId, chaptersPerPage = 10 }) {
   // Pagination logic (from previous improvement)
   const totalPages = Math.ceil(chapters.length / chaptersPerPage);
   const [currentPage, setCurrentPage] = useState(1);
+
   useEffect(() => {
     setCountUpdates((prev) => prev + 1);
     setShowAd(true);
@@ -55,6 +61,26 @@ function NavChapter({ chapters, bookId, chaptersPerPage = 10 }) {
   const goToLastPage = () => {
     setCurrentPage(totalPages);
   };
+
+  // --- Next/Previous Chapter Logic ---
+  const currentChapterIndex = chapters.findIndex(
+    (c) => c.id === currentChapterId
+  );
+  const nextChapter = chapters[currentChapterIndex + 1];
+  const prevChapter = chapters[currentChapterIndex - 1];
+
+  const handleChapterNavigation = useCallback(
+    (selectedChapterId) => {
+      if (!selectedChapterId) return; // Guard against trying to navigate to a non-existent chapter
+      const targetPath = `/book/${bookId}/chapter/${selectedChapterId}`;
+      if (onNavigateToChapter) {
+        onNavigateToChapter(targetPath);
+      } else {
+        navigate(targetPath); // Fallback to direct navigation
+      }
+    },
+    [bookId, onNavigateToChapter, navigate]
+  );
 
   // Handler for select dropdown change
   const handleSelectChange = (event) => {
@@ -126,8 +152,35 @@ function NavChapter({ chapters, bookId, chaptersPerPage = 10 }) {
               >
                 Last &raquo;
               </button>
+              <button
+                onClick={goToNextPage}
+                disabled={currentPage === totalPages}
+              >
+                Next &rsaquo;
+              </button>
+              <button
+                onClick={goToLastPage}
+                disabled={currentPage === totalPages}
+              >
+                Last &raquo;
+              </button>
             </div>
           )}
+          {/* New: Next/Previous Chapter Buttons */}
+          <div className="sequential-nav">
+            <button
+              onClick={() => handleChapterNavigation(prevChapter?.id)}
+              disabled={!prevChapter}
+            >
+              &larr; Previous Chapter
+            </button>
+            <button
+              onClick={() => handleChapterNavigation(nextChapter?.id)}
+              disabled={!nextChapter}
+            >
+              Next Chapter &rarr;
+            </button>
+          </div>
         </nav>
       )}
     </>
