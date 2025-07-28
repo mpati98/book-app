@@ -1,10 +1,13 @@
 import React from "react";
 import { homeBooksStyles as styles } from "../assets/dummystyles";
 import { carouselBooks } from "../assets/dummydata";
-import { ArrowRight, Star } from "lucide-react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const HomeBook = () => {
+    const navigate = useNavigate();
+    const toBook = (bookId) => {
+    navigate(`/book/${bookId}`);
+  };
   return (
     <div className={styles.section}>
       <div className={styles.container}>
@@ -16,7 +19,9 @@ const HomeBook = () => {
           <div className={styles.grid}>
             {carouselBooks.map((book) => {
               return (
-                <div key={book.id} className={styles.bookCard}>
+                <div key={book.id} className={styles.bookCard}
+                onClick={() => toBook(book.id)}
+                >
                   <div className={styles.imageWrapper}>
                     <img
                       src={book.coverImage}

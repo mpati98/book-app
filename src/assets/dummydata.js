@@ -52,31 +52,31 @@ import B202511 from "../assets/covers/B202511.jpg"
 
 export const carouselBooks = [
   {
-    id: 1,
+    id: "B20257",
     title: "ĐỘC CHIẾM SỦNG ÁI",
     category: "Hài hước, Cổ đại, Hệ thống, Ngọt, Sủng",
     coverImage: B20257,
   },
   {
-    id: 2,
+    id: "B20258",
     title: "MỆNH TẠI NHÂN VI",
     category: "Cổ đại, Cung Đấu, Vả mặt, Trọng sinh, Xuyên sách",
     coverImage: B20258,
   },
   {
-    id: 3,
+    id: "B20259",
     title: "THÁI TỬ PHI LÀ TA, PHÒ MÃ CŨNG LÀ TA",
     category: "Hài hước, Cổ đại, Ngọt, Sủng",
     coverImage: B20259,
   },
   {
-    id: 4,
+    id: "B202510",
     title: "CHÚNG TA CỦA NHỮNG NĂM VỀ SAU",
     category: "Chữa lành, Học đường, Ngọt",
     coverImage: B202510,
   },
   {
-    id: 5,
+    id: "B202511",
     title: "THIÊN HẠ LÀ CỦA CHÀNG, CÒN CHÀNG LÀ CỦA TA",
     category: "Cổ đại, Cung Đấu, Cưới trước yêu sau, Sủng, Ngọt",
     coverImage: B202511,
