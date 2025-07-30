@@ -147,8 +147,8 @@ export const ourBestSellersStyles = {
   scrollContainer: "flex overflow-x-auto gap-4 md:gap-8 pb-6 md:pb-8 scrollbar-hide scroll-smooth snap-x",
 
   // Card
-  card: (bgClass) => `flex-shrink-0 w-[calc(100vw-2rem)] sm:w-96 md:w-[400px] rounded-2xl md:rounded-3xl overflow-hidden bg-gradient-to-br ${bgClass} shadow-lg md:shadow-xl relative group transition-all duration-300 hover:shadow-xl md:hover:shadow-2xl snap-center`,
-  cardInner: "p-6 md:p-8 pb-48 md:pb-60 flex flex-col justify-between h-full relative z-10",
+  card: (bgClass) => `flex-shrink-0 w-[calc(80vw-2rem)] sm:w-96 md:w-[400px] rounded-2xl md:rounded-3xl overflow-hidden bg-gradient-to-br ${bgClass} shadow-lg md:shadow-xl relative group transition-all duration-300 hover:shadow-xl md:hover:shadow-2xl snap-center`,
+  cardInner: "p-6 md:p-8 pb-8 md:pb-6 flex flex-col justify-between h-full relative z-10",
   stars: "flex items-center gap-1 md:gap-1.5",
   bookInfo: "space-y-1.5 md:space-y-2",
   bookTitle: "text-xl md:text-2xl font-bold text-gray-900 leading-tight",

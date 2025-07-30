@@ -25,7 +25,7 @@ function AdPlayer({ videoSrc, onSkip }) {
   }, []);
   const handleVideoClick = () => {
         // Navigate to a specific URL
-        window.open('https://www.google.com');
+        window.open('https://shopee.vn/-MUA-1-T%E1%BA%B6NG-1-Kem-ch%E1%BB%91ng-n%E1%BA%AFng-AHC-ph%E1%BB%95-r%E1%BB%99ng-400nm-c%C4%83ng-m%C6%B0%E1%BB%9Bt-da-chu%E1%BA%A9n-H%C3%A0n-Masters-Aqua-Rich-Sun-Cream-30ml-i.219192749.27579444616');
         // Or, if you want to open in a new tab:
         // window.open('https://www.example.com/your-destination-page', '_blank');
       };

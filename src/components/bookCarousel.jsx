@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -12,6 +13,10 @@ import { Autoplay, EffectCards } from "swiper/modules";
 import { carouselBooks } from "../assets/dummydata";
 
 export default function BookCarousel() {
+  const navigate = useNavigate();
+    const toBook = (bookId) => {
+    navigate(`/book/${bookId}`);
+  };
   return (
     <div className="book-carousel-container">
       <Swiper
@@ -27,7 +32,10 @@ export default function BookCarousel() {
       >
         {carouselBooks.map((book) => (
           <SwiperSlide key={book.id}>
-            <div className="book-slide">
+            <div className="book-slide"
+            onClick={() => toBook(book.id)}
+            >
+
               <img src={book.coverImage} alt={book.title} />
               <h3>{book.title}</h3>
               <p>{book.category}</p>
