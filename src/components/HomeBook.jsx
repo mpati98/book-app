@@ -1,6 +1,6 @@
 import React from "react";
 import { homeBooksStyles as styles } from "../assets/dummystyles";
-import { carouselBooks } from "../assets/dummydata";
+import { carouselBooks } from "../assets/bookappdata";
 import { useNavigate } from "react-router-dom";
 
 const HomeBook = () => {
@@ -37,12 +37,6 @@ const HomeBook = () => {
               );
             })}
           </div>
-          {/* <div className={styles.viewBtnWrapper}>
-            <Link to="/books" className={styles.viewBtn}>
-              <span>View all books</span>
-              <ArrowRight className={styles.viewIcon} />
-            </Link>
-          </div> */}
         </div>
       </div>
     </div>

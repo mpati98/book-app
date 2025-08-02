@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import Airtable from "airtable";
 import { ourBestSellersStyles as styles } from "../assets/dummystyles";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
-import { bgColors } from "../assets/dummydata";
+import { bgColors } from "../assets/bookappdata";
 import { useNavigate } from "react-router-dom";
 const AIRTABLE_API_KEY = import.meta.env.VITE_AIRTABLE_API_KEY;
 const AIRTABLE_BASE_ID = import.meta.env.VITE_AIRTABLE_BASE_ID;

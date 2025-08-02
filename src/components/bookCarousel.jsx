@@ -10,7 +10,7 @@ import "swiper/css/effect-cards";
 
 // 1. Import Autoplay module in addition to EffectCards
 import { Autoplay, EffectCards } from "swiper/modules";
-import { carouselBooks } from "../assets/dummydata";
+import { carouselBooks } from "../assets/bookappdata";
 
 export default function BookCarousel() {
   const navigate = useNavigate();

@@ -1,7 +1,7 @@
 import { footerStyles as styles } from "../assets/dummystyles";
 import logoImg from "../assets/yeutruyenlogo.jpg";
 import { Link } from "react-router-dom";
-import { socialLinks, quickLinks } from "../assets/dummydata";
+import { socialLinks, quickLinks } from "../assets/bookappdata";
 const Footer = () => {
   return (
     <footer className={styles.footer}>

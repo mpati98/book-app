@@ -1,9 +1,9 @@
 {
-  "id": "B202515",
-  "title": "MỘT KIẾP, MỘT VÁN CỜ",
-  "coverImage": "/data/covers/B202515.jpg",
+  "id": "B202516",
+  "title": "VÌ NGƯỜI, TA NGUYỆN LỚN LÊN GIỮA GƯƠM ĐAO",
+  "coverImage": "/data/covers/B202516.jpg",
   "author": "",
-  "description": "/data/B202515/description.txt",
+  "description": "/data/B202516/description.txt",
   "category": "",
   "chapters": [
     {
@@ -45,14 +45,6 @@
     {
       "id": 10,
       "title": "Chương 10"
-    },
-    {
-      "id": 11,
-      "title": "Chương 11"
-    },
-    {
-      "id": 12,
-      "title": "Chương 12"
     }
   ]
 }

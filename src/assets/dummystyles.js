@@ -1,9 +1,7 @@
 // assets/dummy/dummystyles.js
 
 export const navbarStyles = {
-  nav: (scrolled) =>
-    `fixed top-0 left-0 right-0 z-50 bg-[#F0E8DE] transition-all duration-500 ${scrolled ? "shadow-md py-2" : "py-4"
-    }`,
+  nav: "relative top-0 left-0 right-0 z-50 bg-[#F0E8DE] transition-all duration-500 py-2",
 
   container: "container mx-auto px-4 md:px-6",
   logoContainer: "flex items-center",
@@ -30,38 +28,6 @@ export const navbarStyles = {
 
   navUnderline: (color) =>
     `absolute bottom-0 left-0 h-0.5 w-full bg-gradient-to-r ${color}`,
-
-  rightIconsWrapper: "hidden md:flex items-center space-x-5",
-
-  cartWrapper: "relative group",
-  cartGradient: "absolute -inset-2 bg-gradient-to-r from-amber-500 to-orange-600 rounded-full opacity-0 blur-md group-hover:opacity-30 transition-opacity duration-500",
-  cartIcon: "relative h-5 w-5 text-gray-600 group-hover:text-amber-600 transition-colors duration-300 z-10",
-  cartBadge:
-    "absolute top-[-14px] right-[-14px] flex items-center justify-center w-5 h-5 bg-gradient-to-r from-amber-500 to-orange-600 text-[10px] font-bold text-white rounded-full",
-
-  loginWrapper: "relative group",
-  loginGradient: "absolute -inset-2 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full opacity-0 blur-md group-hover:opacity-30 transition-opacity duration-500",
-  loginIcon: "relative h-5 w-5 text-gray-600 group-hover:text-emerald-600 transition-colors duration-300 z-10",
-
-  menuBtn: "relative group p-1",
-  menuGradient: "absolute -inset-2 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full opacity-0 blur-md group-hover:opacity-30 transition-opacity duration-500",
-  menuIcon: "relative h-6 w-6 text-gray-600 z-10",
-
-  mobileMenu: "md:hidden absolute top-full left-0 right-0 bg-white shadow-lg z-40",
-  mobileContainer: "container mx-auto px-4 py-4",
-  mobileNavItem: (isActive, color) =>
-    `flex items-center px-4 py-3 rounded-lg ${isActive ? `bg-gradient-to-r ${color}/10` : "hover:bg-gray-100"
-    } transition-colors`,
-
-  mobileNavIcon: (isActive, color) =>
-    `h-5 w-5 ${isActive ? `text-${color.split('-')[1]}-500` : "text-gray-600"}`,
-
-  mobileNavText: (isActive, color) =>
-    `ml-3 ${isActive ? `text-${color.split('-')[1]}-600 font-medium` : "text-gray-600"}`,
-
-  mobileIconRow: "flex justify-between items-center mt-4",
-  mobileCartBadge:
-    "absolute top-0 right-0 -mt-1 -mr-1 w-5 h-5 flex items-center justify-center text-[10px] font-bold text-white bg-gradient-to-r from-amber-500 to-orange-600 rounded-full",
 }
 
 //banner
