@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import LoadingBook from "../components/LoadingBook";
 import FeaturedContent from "../components/featureContent";
 import image from "../assets/logo4share.png";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   const home = {
@@ -13,14 +14,13 @@ const Home = () => {
   };
   return (
     <>
-      <article className="invisible hidden">
-        <h1>{home.title }</h1>
-        <title>Trang chủ</title>\
-        <link rel="author" href={home.pageUrl} />
-        <meta name="keywords" content="" />
-        <img src={image} alt="Yêu truyện logo" />
-        <p>{home.description}</p>
-      </article>
+      <Helmet>
+        <meta property="og:image" content={image} />
+        <meta property="og:image:alt" content={home.description} />
+        <meta property="author" href={home.pageUrl} />
+        <meta name="twitter:image" content={image} />
+        <meta name="twitter:image:alt" content={home.description} />
+      </Helmet>
       <Navbar />
       <FeaturedContent />
       <LoadingBook />
