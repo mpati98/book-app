@@ -11,11 +11,12 @@ const Home = () => {
     title: "Yêu Truyện",
     description: "Website đọc truyện chuyển ngữ",
     pageUrl: "https://www.yeutruyen.com.vn",
+    imgurl: "https://unsplash.com/photos/open-book-lot-Oaqk7qqNh_c"
   };
   return (
     <>
       <Helmet>
-        <meta property="og:image" content={image} />
+        <meta property="og:image" content={home.imgurl} />
         <meta property="og:image:alt" content={home.description} />
         <meta property="author" href={home.pageUrl} />
         <meta name="twitter:image" content={image} />
