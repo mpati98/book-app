@@ -13,15 +13,14 @@ const Home = () => {
   };
   return (
     <>
-      {/* Standard HTML Tags */}
-      <title>{home.title}</title>
-      <meta name="description" content={home.description} />
-
-      {/* Open Graph Tags (for Facebook, LinkedIn, etc.) */}
-      <meta property="og:title" content={home.title} />
-      <meta property="og:description" content={home.description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={home.pageUrl} />
+      <article className="invisible hidden">
+        <h1>{home.title }</h1>
+        <title>Trang chủ</title>\
+        <link rel="author" href={home.pageUrl} />
+        <meta name="keywords" content="" />
+        <img src={image} alt="Yêu truyện logo" />
+        <p>{home.description}</p>
+      </article>
       <Navbar />
       <FeaturedContent />
       <LoadingBook />

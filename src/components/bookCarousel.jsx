@@ -23,7 +23,6 @@ export default function BookCarousel() {
         effect={"cards"}
         grabCursor={true}
         modules={[Autoplay, EffectCards]} // 2. Add Autoplay to the modules array
-        className="mySwiper"
         // 3. Add the autoplay configuration object
         autoplay={{
           delay: 2500,

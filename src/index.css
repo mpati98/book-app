@@ -405,16 +405,16 @@
 /* Responsive Design for smaller screens */
 @media (max-width: 768px) {
   .featured-container {
+    width: 100%;
+    display: flex;
     flex-direction: column;
     margin: 1rem 0 1rem 0;
   }
   .featured-column {
     /* Each column will take up equal space */
     position: relative;
+    flex: 1;
     /* min-width: 0; Important for flex items to shrink properly */
-  }
-  .ad-column {
-    width: 100%;
   }
   .ad-section {
     position: relative;
@@ -428,21 +428,22 @@
     z-index: 1;
     max-width: 70%;
   }
-  .carousel-column {
-    width: 100%;
-  }
   .book-carousel-container {
-    /* A narrower container works better for the card stack effect */
-
-    height: 350px;
-  }
-  .mySwiper {
     position: relative;
-    width: 80%;
-    height: 450px;
+    flex: 1;
+    height: 350px;
+
+  }
+  .swiper {
+  width: 200px;
+  height: 250px;
+  }
+  .swiper-wrapper{
+    width: 200px;
+    height: 250px;
   }
   .swiper-3d {
-    perspective: 50px;
+    display: none;
   }
 
   .book-slide img {

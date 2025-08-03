@@ -16,7 +16,7 @@ function FeaturedContent() {
 
   return (
     <section className="py-12 md:py-16">
-      <div className="featured-container mx-auto px-4 md:px-4">
+      <div className="featured-container">
         {/* Left Column for Advertising */}
         <div className="featured-column ad-column">
           <AdsSection {...promoData} />
