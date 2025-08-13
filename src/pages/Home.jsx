@@ -11,7 +11,7 @@ const Home = () => {
     title: "Yêu Truyện",
     description: "Website đọc truyện chuyển ngữ",
     pageUrl: "https://www.yeutruyen.com.vn",
-    imgurl: "https://raw.githubusercontent.com/mpati98/book-app/refs/heads/main/src/assets/logo4share.png"
+    imgurl: "https://firebasestorage.googleapis.com/v0/b/arti-web-daae5.appspot.com/o/product_images%2Fyeutruyenlogo.jpg?alt=media&token=cc2e9833-de1e-44f6-b1ac-58234ad3d342"
   };
   return (
     <>

@@ -14,14 +14,12 @@ function NavChapter({
   const [showAd, setShowAd] = useState(true);
   const [count, setCount] = useState(0);
   const [countUpdates, setCountUpdates] = useState(0);
-
+  // Replace with the actual URL or path to your video file
+  const adVideoURL = "/shopee_add.mp4"; // Example video
   // This function will be called when the skip button is clicked
   const handleSkipAd = () => {
     setShowAd(false);
   };
-
-  // Replace with the actual URL or path to your video file
-  const adVideoURL = "/shopee_add.mp4"; // Example video
 
   // Pagination logic (from previous improvement)
   const totalPages = Math.ceil(chapters.length / chaptersPerPage);

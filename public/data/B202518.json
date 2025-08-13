@@ -1,0 +1,54 @@
+{
+  "id": "B202518",
+  "title": "KHÔNG CẦU PHÚ QUÝ, CHỈ CẦU NGƯỜI",
+  "coverImage": "/data/covers/B202517.jpg",
+  "author": "",
+  "description": "/data/B202518/description.txt",
+  "category": "",
+  "chapters": [
+    {
+      "id": 1,
+      "title": "Chương 01"
+    },
+    {
+      "id": 2,
+      "title": "Chương 02"
+    },
+    {
+      "id": 3,
+      "title": "Chương 03"
+    },
+    {
+      "id": 4,
+      "title": "Chương 04"
+    },
+    {
+      "id": 5,
+      "title": "Chương 05"
+    },
+    {
+      "id": 6,
+      "title": "Chương 06"
+    },
+    {
+      "id": 7,
+      "title": "Chương 07"
+    },
+    {
+      "id": 8,
+      "title": "Chương 08"
+    },
+    {
+      "id": 9,
+      "title": "Chương 09"
+    },
+    {
+      "id": 10,
+      "title": "Chương 10"
+    },
+    {
+      "id": 11,
+      "title": "Chương 09"
+    }
+  ]
+}
