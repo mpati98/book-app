@@ -14,11 +14,12 @@ const Home = () => {
     title: "Yêu Truyện",
     description: "Website đọc truyện chuyển ngữ",
     pageUrl: "https://www.yeutruyen.com.vn",
+    imgURL: "https://monkeyd.net.vn/images/seo/seo-image.png"
   };
   return (
     <>
       <Helmet>
-        <meta property="og:image" content={image } />
+        <meta property="og:image" content={home.imgURL } />
         <meta property="og:image:alt" content={home.description} /> 
         <meta property="author" href={home.pageUrl} />
         <meta name="twitter:image" content={<FirebaseImage imagePath="/product_images/yeutruyenlogo.jpg" />} />
